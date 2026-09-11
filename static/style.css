@@ -1,0 +1,214 @@
+:root {
+    --font-mono: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono", monospace;
+    --bg: #222129;
+    --bg-card: #2a2831;
+    --accent: #FFA86A;
+    --accent-muted: #bc8d6b;
+    --border: #FFA86A;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-mono);
+    background: var(--bg);
+    color: var(--accent);
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 24px 20px 0;
+}
+
+nav .brand {
+    font-weight: 700;
+    color: var(--accent);
+    text-decoration: none;
+}
+
+nav .brand::before {
+    content: "~/";
+    color: var(--accent-muted);
+}
+
+nav .nav-links a {
+    margin-left: 20px;
+    text-decoration: underline;
+    color: var(--accent-muted);
+}
+
+nav .nav-links a:hover {
+    color: var(--accent);
+}
+
+main {
+    max-width: 720px;
+    margin: 30px auto 20px;
+    padding: 30px;
+    border: 1px solid var(--border);
+}
+
+.term-bar {
+    display: flex;
+    gap: 8px;
+    margin: -10px 0 20px -10px;
+}
+
+.term-bar .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.term-bar .dot.red { background: #ff5f56; }
+.term-bar .dot.yellow { background: #ffbd2e; }
+.term-bar .dot.green { background: #27c93f; }
+
+.hero {
+    text-align: center;
+    padding: 10px 0 40px;
+}
+
+.avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 2px solid var(--border);
+}
+
+.hero h1 {
+    margin: 20px 0 8px;
+    font-size: 1.6rem;
+    color: var(--accent);
+}
+
+.hero h1::before {
+    content: "> ";
+}
+
+.hero .tagline {
+    color: var(--accent-muted);
+    margin: 0 0 20px;
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 0 6px;
+    padding: 8px 18px;
+    border: 1px solid var(--border);
+    text-decoration: none;
+    color: var(--accent);
+    font-size: 0.9rem;
+    transition: background 0.15s, color 0.15s;
+}
+
+.social-links a:hover {
+    background: var(--accent);
+    color: var(--bg);
+}
+
+.projects h2,
+.posts h2 {
+    font-size: 1.05rem;
+    margin: 0 0 16px;
+    color: var(--accent);
+    font-weight: 400;
+}
+
+.projects {
+    padding-bottom: 30px;
+    border-bottom: 1px dashed var(--accent-muted);
+    margin-bottom: 30px;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 14px;
+}
+
+.project-card {
+    display: block;
+    background: var(--bg-card);
+    border: 1px solid var(--accent-muted);
+    padding: 16px;
+    text-decoration: none;
+    color: var(--accent);
+    transition: border-color 0.15s;
+}
+
+.project-card:hover {
+    border-color: var(--accent);
+}
+
+.project-card h3 {
+    margin: 0 0 8px;
+    font-size: 0.95rem;
+}
+
+.project-card h3::before {
+    content: "> ";
+    color: var(--accent-muted);
+}
+
+.project-card p {
+    margin: 0;
+    font-size: 0.82rem;
+    color: var(--accent-muted);
+}
+
+.post-list {
+    list-style: none;
+    margin: 0 0 16px;
+    padding: 0;
+}
+
+.post-list li {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.post-date {
+    flex: 0 0 90px;
+    color: var(--accent-muted);
+}
+
+.post-list a {
+    color: var(--accent);
+    text-decoration: underline;
+}
+
+.post-list a:hover {
+    color: #fff;
+}
+
+.view-all {
+    display: inline-block;
+    color: var(--accent-muted);
+    text-decoration: none;
+    font-size: 0.85rem;
+}
+
+.view-all:hover {
+    color: var(--accent);
+}
+
+footer {
+    text-align: center;
+    color: var(--accent-muted);
+    font-size: 0.8rem;
+    padding: 20px;
+    opacity: 0.7;
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ title }} - Aaron Smith</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav>
+        <a class="brand" href="{{ url_for('home') }}">Aaron Smith</a>
+        <div class="nav-links">
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('about') }}">About</a>
+        </div>
+    </nav>
+    <main>
+        <div class="term-bar">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+        </div>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <p>&copy; 2026 Aaron Smith</p>
+    </footer>
+</body>
+</html>
